@@ -1,0 +1,94 @@
+<div class="upload-container" *ngIf="flagNameofRows">
+    <h3>העלאת קובץ אקסל של תלמידי החיידר</h3>
+
+    <label for="fileInput" class="custom-file-upload">
+        בחר קובץ Excel
+        <input id="fileInput" type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" required />
+    </label>
+</div>
+
+<form class="nameRows" [formGroup]="nameOfRows" (ngSubmit)="onSubmit()" *ngIf="flagNameofRows">
+
+    <h1> הכנס את שמות העמודות בהתאם למה שכתוב בקובץ האקסל של החיידר</h1>
+    <label for="phone">טלפון</label>
+    <div class="">
+        <input type="text" class="" formControlName="phone" />
+    </div>
+    <label for="fatherPhone">נייד אבא</label>
+    <div class="">
+        <input type="text" class="" formControlName="fatherPhone" />
+    </div>
+    <label for="houseNumber">מספר בית</label>
+    <div class="">
+        <input type="text" class="" formControlName="houseNumber" />
+    </div>
+    <label for="firstName">שם פרטי</label>
+    <div class="">
+        <input type="text" class="" formControlName="firstName" />
+    </div>
+    <label for="lastName">שם משפחה</label>
+    <div class="">
+        <input type="text" class="" formControlName="lastName" />
+    </div>
+    <label for="fatherName">שם אבא</label>
+    <div class="">
+        <input type="text" class="" formControlName="fatherName" />
+    </div>
+    <label for="class">כיתה</label>
+    <div class="">
+        <input type="text" class="" formControlName="class" />
+    </div>
+    <label for="address">כתובת</label>
+    <div class="">
+        <input type="text" class="" formControlName="address" />
+    </div>
+    <input type="submit">
+</form>
+<table *ngIf="!flagNameofRows">
+    <thead>
+        <tr>
+            <th>שם פרטי</th>
+            <th>שם משפחה</th>
+            <th>טלפון</th>
+            <th>שם אב</th>
+            <th>נייד אב</th>
+            <th>בוגרים תואמים</th>
+            <th>אברכים תואמים</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of searchResult">
+            <td>{{ result.child?.firstName || '---' }}</td>
+            <td>{{ result.child?.lastName || '---' }}</td>
+            <td>{{ result.child?.phone || '---' }}</td>
+            <td>{{ result.child?.fatherName || '---' }}</td>
+            <td>{{ result.child?.fatherPhone || '---' }}</td>
+
+
+
+            <td>
+                <ul *ngIf="result.graduateMatch?.length; else noGrad">
+                    <li *ngFor="let grad of result.graduateMatch" (click)="openGraduateDialog(grad)"
+                        style="cursor: pointer; color: #4a90e2; text-decoration: underline;">
+                        {{ grad.firstName }} {{ grad.lastName }} - {{ grad.mobilePhone }}
+                    </li>
+                </ul>
+                <ng-template #noGrad><span>אין</span></ng-template>
+            </td>
+
+            <td>
+                <ul *ngIf="result.yeshivaStudentMatch?.length; else noYeshiva">
+                    <li *ngFor="let yesh of result.yeshivaStudentMatch" (click)="openDialogYeshivaStudent(yesh)"
+                        style="cursor: pointer; color:#4a90e2; text-decoration: underline;">
+                        {{ yesh.fullName }} - {{ yesh.phone }}
+                    </li>
+                </ul>
+                <ng-template #noYeshiva><span>אין</span></ng-template>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div #popupContainer></div>
+<div id="upload" *ngIf="!flagNameofRows" (click)="toggleFlagNameofRows()">
+    <h3>להעלאת אקסל נוסף</h3>
+</div>

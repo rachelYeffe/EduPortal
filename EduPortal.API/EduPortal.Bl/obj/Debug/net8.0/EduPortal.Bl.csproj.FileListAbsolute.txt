@@ -1,0 +1,17 @@
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Bl.deps.json
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Bl.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Bl.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Dto.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Dto.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\bin\Debug\net8.0\EduPortal.Dal.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.csproj.AssemblyReference.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.AssemblyInfoInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.AssemblyInfo.cs
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.csproj.CoreCompileInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPorta.2578E48C.Up2Date
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\refint\EduPortal.Bl.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\EduPortal.Bl.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Bl\obj\Debug\net8.0\ref\EduPortal.Bl.dll

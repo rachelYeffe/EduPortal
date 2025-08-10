@@ -1,0 +1,359 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.API\\EduPortal.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.API\\EduPortal.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.API\\EduPortal.API.csproj",
+        "projectName": "EduPortal.API",
+        "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.API\\EduPortal.API.csproj",
+        "packagesPath": "C:\\Users\\יפה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\יפה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj": {
+                "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj"
+              },
+              "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj": {
+                "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj"
+              },
+              "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj": {
+                "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj",
+        "projectName": "EduPortal.Bl",
+        "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj",
+        "packagesPath": "C:\\Users\\יפה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Bl\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\יפה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj": {
+                "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
+        "projectName": "EduPortal.Dal",
+        "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
+        "packagesPath": "C:\\Users\\יפה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\יפה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj",
+        "projectName": "EduPortal.Dto",
+        "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj",
+        "packagesPath": "C:\\Users\\יפה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\יפה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj": {
+                "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\אתר לזאבי\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
