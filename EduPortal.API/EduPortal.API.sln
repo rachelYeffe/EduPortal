@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortal.API", "EduPortal.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortal.Dal", "EduPortal.Dal\EduPortal.Dal.csproj", "{15335A30-BDE9-49A4-A29B-4A5FA2E19878}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduPortal.Bl", "EduPortal.Bl\EduPortal.Bl.csproj", "{D3B3A26C-8E24-44BA-8AE3-516D8241C818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortal.Bl", "EduPortal.Bl\EduPortal.Bl.csproj", "{D3B3A26C-8E24-44BA-8AE3-516D8241C818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduPortal.Dto", "EduPortal.Dto\EduPortal.Dto.csproj", "{109C31BE-BA9E-4C3F-B254-641D13629A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduPortal.Dto", "EduPortal.Dto\EduPortal.Dto.csproj", "{109C31BE-BA9E-4C3F-B254-641D13629A53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67813C5F-C7DD-4166-9AF1-4A8978D7836F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
