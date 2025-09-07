@@ -40,4 +40,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-\EduPortal-client\src\app\Enviroments/
+/EduPortal-client/src/app/Enviroments/
