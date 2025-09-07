@@ -12,3 +12,18 @@ C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\Ed
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.pdb
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.genruntimeconfig.cache
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\ref\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\bin\Debug\net8.0\EduPortal.Dal.deps.json
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\bin\Debug\net8.0\EduPortal.Dal.runtimeconfig.json
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\bin\Debug\net8.0\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\bin\Debug\net8.0\EduPortal.Dal.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.csproj.AssemblyReference.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.AssemblyInfoInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.AssemblyInfo.cs
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.csproj.CoreCompileInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.sourcelink.json
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\refint\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\EduPortal.Dal.genruntimeconfig.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dal\obj\Debug\net8.0\ref\EduPortal.Dal.dll

@@ -1,4 +1,4 @@
 export const environment = {
-     apiUrl: 'https://localhost:7218/api/',
+     apiUrl: 'https://eduportal-kozl.onrender.com/api/',
 
 };

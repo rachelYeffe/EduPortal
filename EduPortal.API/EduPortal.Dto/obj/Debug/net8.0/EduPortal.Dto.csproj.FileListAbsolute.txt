@@ -13,3 +13,19 @@ C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\Ed
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\refint\EduPortal.Dto.dll
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.pdb
 C:\Users\יפה\Desktop\רחלי תיכנות\אתר לזאבי\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\ref\EduPortal.Dto.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\bin\Debug\net8.0\EduPortal.Dto.deps.json
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\bin\Debug\net8.0\EduPortal.Dto.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\bin\Debug\net8.0\EduPortal.Dto.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\bin\Debug\net8.0\EduPortal.Dal.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\bin\Debug\net8.0\EduPortal.Dal.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.csproj.AssemblyReference.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.AssemblyInfoInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.AssemblyInfo.cs
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.csproj.CoreCompileInputs.cache
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.sourcelink.json
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPorta.05451EC7.Up2Date
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\refint\EduPortal.Dto.dll
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\EduPortal.Dto.pdb
+C:\Users\יפה\Desktop\רחלי תיכנות\EduPortal\EduPortal.API\EduPortal.Dto\obj\Debug\net8.0\ref\EduPortal.Dto.dll
