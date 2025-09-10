@@ -31,7 +31,7 @@ namespace EduPortal.API
                                   policy =>
                                   {
                                       // הגדרת המקור הספציפי והרשאות
-                                      policy.WithOrigins("http://localhost:4200")
+                                      policy.WithOrigins("http://localhost:4200", "https://eduportal-front.onrender.com")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod()
                                             .AllowCredentials(); // חובה כדי להתיר credentials
