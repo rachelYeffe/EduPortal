@@ -25,16 +25,19 @@ namespace EduPortal.API
             builder.Services.AddScoped(typeof(IExcelImport), typeof(Bl.Services.ExcelImportService));
             builder.Services.AddScoped(typeof(ISearch), typeof(Bl.Services.SearchService));
 
+            // CORS
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy(name: "AllowSpecificOrigin",
                                   policy =>
                                   {
-                                      // הגדרת המקור הספציפי והרשאות
-                                      policy.WithOrigins("http://localhost:4200", "https://eduportal-front.onrender.com")
+                                      policy.WithOrigins(
+                                              "http://localhost:4200", // dev server
+                                              "https://eduportal-front.onrender.com" // production
+                                          )
                                             .AllowAnyHeader()
                                             .AllowAnyMethod()
-                                            .AllowCredentials(); // חובה כדי להתיר credentials
+                                            .AllowCredentials();
                                   });
             });
 
@@ -45,14 +48,14 @@ namespace EduPortal.API
 
             var app = builder.Build();
 
+            // CORS צריך להיות ראשון
+            app.UseCors("AllowSpecificOrigin");
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
-            // הפעלת מדיניות ה-CORS שהוגדרה
-            app.UseCors("AllowSpecificOrigin");
 
             app.UseHttpsRedirection();
             app.UseAuthorization();
