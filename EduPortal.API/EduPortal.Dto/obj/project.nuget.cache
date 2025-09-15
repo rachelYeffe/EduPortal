@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0wEtzg1Bmt0=",
+  "dgSpecHash": "yEJBjh4rekw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj",
+  "projectFilePath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Dto\\EduPortal.Dto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\יפה\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\יפה\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",

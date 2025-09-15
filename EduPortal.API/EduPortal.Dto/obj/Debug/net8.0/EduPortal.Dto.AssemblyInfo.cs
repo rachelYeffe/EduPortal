@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduPortal.Dto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8729481355ae7e3f803b1dd526285fee7b40065d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e35724ed1e5576e78e102a0483a3041bf02a7dd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduPortal.Dto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduPortal.Dto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

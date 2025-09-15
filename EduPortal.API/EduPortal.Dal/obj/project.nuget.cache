@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4A9F3/rjH04=",
+  "dgSpecHash": "5edAQmB4GFU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
+  "projectFilePath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\יפה\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\יפה\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

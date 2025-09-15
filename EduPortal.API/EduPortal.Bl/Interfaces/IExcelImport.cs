@@ -1,8 +1,6 @@
 ﻿using EduPortal.Dto.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace EduPortal.Bl.Interfaces
@@ -22,5 +20,4 @@ namespace EduPortal.Bl.Interfaces
             string classNameHeader = null,
             string addressHeader = null);
     }
-
 }

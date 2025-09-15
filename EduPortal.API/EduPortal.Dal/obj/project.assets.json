@@ -993,11 +993,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
+      "projectUniqueName": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
       "projectName": "EduPortal.Dal",
-      "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
+      "projectPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Dal\\EduPortal.Dal.csproj",
       "packagesPath": "C:\\Users\\יפה\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal\\EduPortal.API\\EduPortal.Dal\\obj\\",
+      "outputPath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Dal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
