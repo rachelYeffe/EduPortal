@@ -1,11 +1,17 @@
 <div class="upload-container" *ngIf="flagNameofRows">
-    <h3>העלאת קובץ אקסל של תלמידי החיידר</h3>
 
-    <label for="fileInput" class="custom-file-upload">
-        בחר קובץ Excel
-        <input id="fileInput" type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" required />
-    </label>
+  <h3>העלאת קובץ אקסל של תלמידי החיידר</h3>
+
+  <label for="fileInput" class="custom-file-upload">
+      בחר קובץ Excel
+      <input id="fileInput" type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" required />
+  </label>
+  <div *ngIf="selectedFile" class="file-name">
+    {{selectedFile.name}}
+  </div>
+
 </div>
+
 
 <form class="nameRows" [formGroup]="nameOfRows" (ngSubmit)="onSubmit()" *ngIf="flagNameofRows">
 

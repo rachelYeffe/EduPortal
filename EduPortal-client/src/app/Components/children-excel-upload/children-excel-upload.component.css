@@ -171,7 +171,11 @@ div[ngif] input[type="file"] {
 .custom-file-upload input[type='file'] {
     display: none;
 }
-/* נניח שהספינר שלך משתמש בקלאס 'ngx-spinner' */
 .ngx-spinner {
-  border-top-color: #4a90e2; /* כאן הצבע שאתה רוצה */
+  border-top-color: #4a90e2; 
+}
+.file-name {
+  margin-top: 10px;
+  font-weight: bold;
+  direction: ltr;  
 }
