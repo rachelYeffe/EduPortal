@@ -20,7 +20,10 @@ export class YeshivaStudentComponent implements OnInit {
   constructor(private yeshivaStudentService: YeshivaStudentService) { }
 
   ngOnInit(): void {
-    this.yeshivaStudentService.GetYeshivaStudentById(this.idStudent).subscribe(res => {
+   
+  }
+  getYeshivaStudent() {
+     this.yeshivaStudentService.GetYeshivaStudentById(this.idStudent).subscribe(res => {
       this.student = res;
       const s = this.student;
       const green = 'style="color: #4a90e2;"';

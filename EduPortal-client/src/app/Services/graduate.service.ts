@@ -8,7 +8,11 @@ import { environment } from '../Enviroments/enviroment';
 })
 export class GraduateService {
   constructor(private http: HttpClient) { }
-  private apiUrl = `${environment.apiUrl}Graduate`;
+  private apiUrl = `${environment.apiUrl}`;
   GetGraduateById(id:string): Observable<Graduate> {
-  return this.http.get<Graduate>(`${this.apiUrl}/GetById?GraduateId=${id}`);
-  }}
+  return this.http.get<Graduate>(`${this.apiUrl}Graduate/GetById?GraduateId=${id}`);
+  }
+  addGradute(form:FormData){
+    return this.http.post(`${this.apiUrl}ExcelImport/UploadExcelGraduate`,form,{responseType: 'text' });
+  }
+}

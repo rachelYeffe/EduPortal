@@ -38,10 +38,11 @@ export class ChildrenExcelUploadComponent implements OnInit {
       fatherName: [''],
       class: [''],
       address: [''],
-      
+
     });
-      this.selectedFile = null!;  }
-  
+    this.selectedFile = null!;
+  }
+
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
@@ -89,13 +90,20 @@ export class ChildrenExcelUploadComponent implements OnInit {
   openGraduateDialog(graduate: Graduate): void {
     this.popupContainer.clear();
     const componentRef = this.popupContainer.createComponent(GraduateComponent);
-    if (graduate.idNumber)
+    if (graduate.idNumber) {
       componentRef.instance.idGraduate = graduate.idNumber;
+      componentRef.instance.getGraduate();
+    }
   }
+
   openDialogYeshivaStudent(yeshiva: YeshivaStudent) {
     const componentRef = this.popupContainer.createComponent(YeshivaStudentComponent);
-    if (yeshiva.idNumber)
+    if (yeshiva.idNumber) {
       componentRef.instance.idStudent = yeshiva.idNumber;
+      componentRef.instance.getYeshivaStudent();
+    }
+
+
   }
   toggleFlagNameofRows() {
     this.flagNameofRows = !this.flagNameofRows

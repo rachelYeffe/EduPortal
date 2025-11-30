@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kA2aaH8AFL8=",
+  "dgSpecHash": "RjPygcrDt4g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\יפה\\Desktop\\רחלי תיכנות\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj",
+  "projectFilePath": "C:\\Users\\יפה\\Desktop\\Pogramer\\EduPortal-git\\EduPortal\\EduPortal.API\\EduPortal.Bl\\EduPortal.Bl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\יפה\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\יפה\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

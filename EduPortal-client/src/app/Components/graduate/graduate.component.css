@@ -3,3 +3,69 @@
   text-align: right;
   font-family: 'Arial', sans-serif;
 }
+
+.upload-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    direction: rtl;
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+.upload-container h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #357ABD;
+}
+
+.custom-file-upload input[type='file'] {
+    display: none;
+}
+
+.file-name {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    direction: ltr;
+}
+
+.upload-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #357ABD;
+}
+
+
+.ngx-spinner {
+    border-top-color: #000000; 
+}
