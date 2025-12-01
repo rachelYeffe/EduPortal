@@ -74,10 +74,8 @@ async validateColumns(file: File): Promise<boolean> {
   let columns: string[] = [];
 
   if (file.name.endsWith(".csv")) {
-    // מנסה לקרוא קודם כ־UTF-8
     let text = new TextDecoder("utf-8").decode(data);
 
-    // אם התווים משובשים, מחליפים ל־Windows-1255
     if (/�/.test(text)) {
       text = new TextDecoder("windows-1255").decode(data);
     }
@@ -90,7 +88,6 @@ async validateColumns(file: File): Promise<boolean> {
     const sheet = workbook.Sheets[firstSheet];
     const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
     columns = json[0] as string[];
-    console.log("XLSX parsed columns:", columns);
   }
 
   const missing = this.requiredColumns.filter(col => !columns.includes(col));

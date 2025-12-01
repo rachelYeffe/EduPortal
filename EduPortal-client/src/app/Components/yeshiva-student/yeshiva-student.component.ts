@@ -37,55 +37,61 @@ export class YeshivaStudentComponent implements OnInit {
   ngOnInit(): void {
     this.selectedFile = null;
   }
-  async uploadFile(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.selectedFile = input.files[0];
+async uploadFile(event: Event) {
+  const input = event.target as HTMLInputElement;
+  if (input.files && input.files.length > 0) {
+    this.selectedFile = input.files[0];
 
-      const isValid = await this.validateColumns(this.selectedFile);
-      if (!isValid) {
-        this.selectedFile = null;
-        input.value = "";
-      }
+    const isValid = await this.validateColumns(this.selectedFile);
+    if (!isValid) {
+      this.selectedFile = null;
+      input.value = "";
     }
   }
+}
 
-  async validateColumns(file: File): Promise<boolean> {
-    const data = await file.arrayBuffer();
-    let columns: string[] = [];
+async validateColumns(file: File): Promise<boolean> {
+  const data = await file.arrayBuffer();
+  let columns: string[] = [];
 
-    if (file.name.endsWith(".csv")) {
-      const text = new TextDecoder("utf-8").decode(data);
-      columns = text.split("\n")[0].split(",").map(c => c.trim());
-    } else {
-      const workbook = XLSX.read(data);
-      const firstSheet = workbook.SheetNames[0];
-      const sheet = workbook.Sheets[firstSheet];
-      const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-      columns = json[0] as string[];
+  if (file.name.endsWith(".csv")) {
+    let text = new TextDecoder("utf-8").decode(data);
+    if (/�/.test(text)) {
+      text = new TextDecoder("windows-1255").decode(data);
     }
 
-    const missing = this.requiredColumns.filter(col => !columns.includes(col));
+    columns = text.split("\n")[0].split(",").map(c => c.trim());
+    console.log("CSV parsed columns:", columns);
+  } else {
+    const workbook = XLSX.read(data);
+    const firstSheet = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[firstSheet];
+    const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+    columns = json[0] as string[];
+  }
 
-    if (missing.length > 0) {
-      Swal.fire({
-        icon: "error",
-        title: "הקובץ אינו תואם",
-        html: `<p>העמודות הבאות חסרות בקובץ:</p><b>${missing.join("<br>")}</b>`,
-        confirmButtonColor: "#4a90e2"
-      });
-      return false;
-    }
+  const missing = this.requiredColumns.filter(col => !columns.includes(col));
 
+  if (missing.length > 0) {
     Swal.fire({
-      icon: "success",
-      title: "הקובץ מאומת",
-      text: "כל העמודות הנדרשות קיימות",
+      icon: "error",
+      title: "הקובץ אינו תואם",
+      html: `<p>העמודות הבאות חסרות בקובץ:</p><b>${missing.join("<br>")}</b>`,
       confirmButtonColor: "#4a90e2"
     });
-
-    return true;
+    return false;
   }
+
+  Swal.fire({
+    icon: "success",
+    title: "הקובץ מאומת",
+    text: "כל העמודות הנדרשות קיימות",
+    confirmButtonColor: "#4a90e2"
+  });
+
+  return true;
+}
+
   submitYeshiva() {
     if (!this.selectedFile) {
       Swal.fire({
