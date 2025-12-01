@@ -1,8 +1,8 @@
 <div class="upload-container">
   <h3>העלאת קובץ בוגרים</h3>
   <label class="custom-file-upload">
-    בחר קובץ Excel
-    <input type="file" accept=".xlsx, .xls" (change)="uploadFile($event)" />
+    בחר קובץ 
+	<input type="file" accept=".xlsx, .xls, .csv" (change)="uploadFile($event)" />
   </label>
 
   <div class="file-name" *ngIf="selectedFile">

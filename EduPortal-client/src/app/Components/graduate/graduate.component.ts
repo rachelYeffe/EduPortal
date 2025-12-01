@@ -4,6 +4,8 @@ import { GraduateService } from '../../Services/graduate.service';
 import Swal from 'sweetalert2';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { NgIf } from '@angular/common';
+import * as XLSX from 'xlsx';
+
 
 @Component({
   selector: 'app-graduate',
@@ -14,15 +16,159 @@ import { NgIf } from '@angular/common';
 })
 export class GraduateComponent implements OnInit {
 
-  @Input()
-  idGraduate!: string;
+  @Input() idGraduate!: string;
   graduate!: Graduate;
-  selectedFile!: File;
-  constructor(private graduateService: GraduateService, private spiner: NgxSpinnerService) { }
+  selectedFile!: File | null;
+ requiredColumns = [
+  'מספר חשבון',
+  'שם משפחה',
+  'שם פרטי+שם אמצעי',
+  'מוסד',
+  'מספר תעודת זהות',
+  'טלפון נייד',
+  'מספר דרכון',
+  'רחוב בית',
+  'מספר בית בית',
+  'דירה בית',
+  'ישוב בית',
+  'כניסה בית',
+  'ישוב בית אב',
+  'רחוב בית אב',
+  'מספר בית בית אב',
+  'כניסה בית אב',
+  'דירה בית אב',
+  'דואר ברירת מחדל',
+  'סוג כרטיס',
+  'מחזור',
+  'גיל',
+  'טלפון בית אב',
+  'טלפון בית נוסף אב',
+  'טלפון נייד אב',
+  'טלפון עסק אב',
+  'טלפון עסק נוסף אב',
+  'מצב משפחתי'
+];
+  
+  constructor(
+    private graduateService: GraduateService,
+    private spiner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-
+    this.selectedFile = null;
   }
+async uploadFile(event: Event) {
+  const input = event.target as HTMLInputElement;
+  if (input.files && input.files.length > 0) {
+    this.selectedFile = input.files[0];
+
+    const isValid = await this.validateColumns(this.selectedFile);
+    if (!isValid) {
+      this.selectedFile = null;
+      input.value = "";
+    }
+  }
+}
+
+async validateColumns(file: File): Promise<boolean> {
+  const data = await file.arrayBuffer();
+  let columns: string[] = [];
+
+  if (file.name.endsWith(".csv")) {
+    // מנסה לקרוא קודם כ־UTF-8
+    let text = new TextDecoder("utf-8").decode(data);
+
+    // אם התווים משובשים, מחליפים ל־Windows-1255
+    if (/�/.test(text)) {
+      text = new TextDecoder("windows-1255").decode(data);
+    }
+
+    columns = text.split("\n")[0].split(",").map(c => c.trim());
+    console.log("CSV parsed columns:", columns);
+  } else {
+    const workbook = XLSX.read(data);
+    const firstSheet = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[firstSheet];
+    const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+    columns = json[0] as string[];
+    console.log("XLSX parsed columns:", columns);
+  }
+
+  const missing = this.requiredColumns.filter(col => !columns.includes(col));
+
+  if (missing.length > 0) {
+    Swal.fire({
+      icon: "error",
+      title: "הקובץ אינו תואם",
+      html: `<p>העמודות הבאות חסרות בקובץ:</p><b>${missing.join("<br>")}</b>`,
+      confirmButtonColor: "#4a90e2"
+    });
+    return false;
+  }
+
+  Swal.fire({
+    icon: "success",
+    title: "הקובץ מאומת",
+    text: "כל העמודות הנדרשות קיימות",
+    confirmButtonColor: "#4a90e2"
+  });
+
+  return true;
+}
+
+
+
+  submitGraduate() {
+    if (!this.selectedFile) {
+      Swal.fire({
+        icon: "error",
+        title: "...אופס",
+        text: "יש לבחור קובץ אקסל",
+        confirmButtonText: "בסדר",
+        confirmButtonColor: "#4a90e2",
+      });
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', this.selectedFile);
+
+    this.spiner.show();
+
+    this.graduateService.addGradute(formData).subscribe({
+      next: (res: string) => {
+        this.spiner.hide();
+
+        Swal.fire({
+          icon: "success",
+          title: "הקובץ הועלה בהצלחה",
+          text: res,
+          confirmButtonText: "חזור לעמוד הבית",
+          confirmButtonColor: "#4a90e2",
+          showDenyButton: true,
+          denyButtonText: "העלה קובץ נוסף",
+          denyButtonColor: "#4a90e2",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = '/';
+          } else if (result.isDenied) {
+            this.selectedFile = undefined as any;
+            const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+            if (fileInput) fileInput.value = '';
+          }
+        });
+      },
+      error: (err) => {
+        this.spiner.hide();
+        Swal.fire({
+          icon: "error",
+          title: "שגיאה בהעלאה",
+          text: err.error || "התרחשה שגיאה, נסי שוב",
+          confirmButtonColor: "#4a90e2",
+        });
+      }
+    });
+  }
+
   getGraduate() {
     this.graduateService.GetGraduateById(this.idGraduate).subscribe(res => {
       this.graduate = res;
@@ -75,63 +221,4 @@ export class GraduateComponent implements OnInit {
       });
     })
   }
-  uploadFile(event: Event) {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.selectedFile = input.files[0];
-    }
-  }
-submitGraduate() {
-  if (!this.selectedFile) {
-    Swal.fire({
-      icon: "error",
-      title: "...אופס",
-      text: "יש לבחור קובץ אקסל",
-      confirmButtonText: "בסדר",
-      confirmButtonColor: "#4a90e2",
-    });
-    return;
-  }
-
-  const formData = new FormData();
-  formData.append('file', this.selectedFile);
-
-  this.spiner.show();
-
-  this.graduateService.addGradute(formData).subscribe({
-    next: (res: string) => {
-      this.spiner.hide();
-
-      Swal.fire({
-        icon: "success",
-        title: "הקובץ הועלה בהצלחה",
-        text: res,
-        confirmButtonText: "חזור לעמוד הבית",
-        confirmButtonColor: "#4a90e2",
-        showDenyButton: true,
-        denyButtonText: "העלה קובץ נוסף",
-        denyButtonColor: "#4a90e2",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = '/';  
-          } else if (result.isDenied) {
-          this.selectedFile = undefined as any;
-          const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
-          if (fileInput) fileInput.value = '';
-        }
-      });
-    },
-    error: (err) => {
-      this.spiner.hide();
-      Swal.fire({
-        icon: "error",
-        title: "שגיאה בהעלאה",
-        text: err.error || "התרחשה שגיאה, נסי שוב",
-        confirmButtonColor: "#4a90e2",
-      });
-    }
-  });
-}
-
-
 }
