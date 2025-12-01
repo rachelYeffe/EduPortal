@@ -1,0 +1,16 @@
+<div class="upload-container">
+	<h3>העלאת קובץ אברכים</h3>
+
+	<label class="custom-file-upload">
+     	בחר קובץ
+		<input type="file" accept=".xlsx, .xls, .csv" (change)="uploadFile($event)" />
+	</label>
+
+	<div class="file-name" *ngIf="selectedFile">
+		{{ selectedFile.name }}
+	</div>
+
+	<button class="upload-btn" *ngIf="selectedFile" (click)="submitYeshiva()">
+		להעלאת קובץ אברכים
+	</button>
+</div>
