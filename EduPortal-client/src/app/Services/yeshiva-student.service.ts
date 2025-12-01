@@ -14,7 +14,7 @@ export class YeshivaStudentService {
     return this.http.get<YeshivaStudent>(`${this.apiUrl}YeshivaStudent/GetById?YeshivaStudentId=${id}`)
 }
     
-    addYeshiva(form: FormData) {
-      return this.http.post(`${environment.apiUrl}ExcelImport/UploadExcelYeshivaStudent`, form, { responseType: 'text' });
+    addYeshiva(form: FormData): Observable<number> {
+      return this.http.post<number>(`${environment.apiUrl}ExcelImport/UploadExcelYeshivaStudent`, form);
     }
     }

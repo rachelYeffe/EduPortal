@@ -19,36 +19,36 @@ export class GraduateComponent implements OnInit {
   @Input() idGraduate!: string;
   graduate!: Graduate;
   selectedFile!: File | null;
- requiredColumns = [
-  'מספר חשבון',
-  'שם משפחה',
-  'שם פרטי+שם אמצעי',
-  'מוסד',
-  'מספר תעודת זהות',
-  'טלפון נייד',
-  'מספר דרכון',
-  'רחוב בית',
-  'מספר בית בית',
-  'דירה בית',
-  'ישוב בית',
-  'כניסה בית',
-  'ישוב בית אב',
-  'רחוב בית אב',
-  'מספר בית בית אב',
-  'כניסה בית אב',
-  'דירה בית אב',
-  'דואר ברירת מחדל',
-  'סוג כרטיס',
-  'מחזור',
-  'גיל',
-  'טלפון בית אב',
-  'טלפון בית נוסף אב',
-  'טלפון נייד אב',
-  'טלפון עסק אב',
-  'טלפון עסק נוסף אב',
-  'מצב משפחתי'
-];
-  
+  requiredColumns = [
+    'מספר חשבון',
+    'שם משפחה',
+    'שם פרטי+שם אמצעי',
+    'מוסד',
+    'מספר תעודת זהות',
+    'טלפון נייד',
+    'מספר דרכון',
+    'רחוב בית',
+    'מספר בית בית',
+    'דירה בית',
+    'ישוב בית',
+    'כניסה בית',
+    'ישוב בית אב',
+    'רחוב בית אב',
+    'מספר בית בית אב',
+    'כניסה בית אב',
+    'דירה בית אב',
+    'דואר ברירת מחדל',
+    'סוג כרטיס',
+    'מחזור',
+    'גיל',
+    'טלפון בית אב',
+    'טלפון בית נוסף אב',
+    'טלפון נייד אב',
+    'טלפון עסק אב',
+    'טלפון עסק נוסף אב',
+    'מצב משפחתי'
+  ];
+
   constructor(
     private graduateService: GraduateService,
     private spiner: NgxSpinnerService) { }
@@ -56,61 +56,61 @@ export class GraduateComponent implements OnInit {
   ngOnInit(): void {
     this.selectedFile = null;
   }
-async uploadFile(event: Event) {
-  const input = event.target as HTMLInputElement;
-  if (input.files && input.files.length > 0) {
-    this.selectedFile = input.files[0];
+  async uploadFile(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
 
-    const isValid = await this.validateColumns(this.selectedFile);
-    if (!isValid) {
-      this.selectedFile = null;
-      input.value = "";
+      const isValid = await this.validateColumns(this.selectedFile);
+      if (!isValid) {
+        this.selectedFile = null;
+        input.value = "";
+      }
     }
   }
-}
 
-async validateColumns(file: File): Promise<boolean> {
-  const data = await file.arrayBuffer();
-  let columns: string[] = [];
+  async validateColumns(file: File): Promise<boolean> {
+    const data = await file.arrayBuffer();
+    let columns: string[] = [];
 
-  if (file.name.endsWith(".csv")) {
-    let text = new TextDecoder("utf-8").decode(data);
+    if (file.name.endsWith(".csv")) {
+      let text = new TextDecoder("utf-8").decode(data);
 
-    if (/�/.test(text)) {
-      text = new TextDecoder("windows-1255").decode(data);
+      if (/�/.test(text)) {
+        text = new TextDecoder("windows-1255").decode(data);
+      }
+
+      columns = text.split("\n")[0].split(",").map(c => c.trim());
+      console.log("CSV parsed columns:", columns);
+    } else {
+      const workbook = XLSX.read(data);
+      const firstSheet = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[firstSheet];
+      const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+      columns = json[0] as string[];
     }
 
-    columns = text.split("\n")[0].split(",").map(c => c.trim());
-    console.log("CSV parsed columns:", columns);
-  } else {
-    const workbook = XLSX.read(data);
-    const firstSheet = workbook.SheetNames[0];
-    const sheet = workbook.Sheets[firstSheet];
-    const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-    columns = json[0] as string[];
-  }
+    const missing = this.requiredColumns.filter(col => !columns.includes(col));
 
-  const missing = this.requiredColumns.filter(col => !columns.includes(col));
+    if (missing.length > 0) {
+      Swal.fire({
+        icon: "error",
+        title: "הקובץ אינו תואם",
+        html: `<p>העמודות הבאות חסרות בקובץ:</p><b>${missing.join("<br>")}</b>`,
+        confirmButtonColor: "#4a90e2"
+      });
+      return false;
+    }
 
-  if (missing.length > 0) {
     Swal.fire({
-      icon: "error",
-      title: "הקובץ אינו תואם",
-      html: `<p>העמודות הבאות חסרות בקובץ:</p><b>${missing.join("<br>")}</b>`,
+      icon: "success",
+      title: "הקובץ מאומת",
+      text: "כל העמודות הנדרשות קיימות",
       confirmButtonColor: "#4a90e2"
     });
-    return false;
+
+    return true;
   }
-
-  Swal.fire({
-    icon: "success",
-    title: "הקובץ מאומת",
-    text: "כל העמודות הנדרשות קיימות",
-    confirmButtonColor: "#4a90e2"
-  });
-
-  return true;
-}
 
 
 
@@ -132,13 +132,13 @@ async validateColumns(file: File): Promise<boolean> {
     this.spiner.show();
 
     this.graduateService.addGradute(formData).subscribe({
-      next: (res: string) => {
+      next: (res: number) => {
         this.spiner.hide();
 
         Swal.fire({
           icon: "success",
           title: "הקובץ הועלה בהצלחה",
-          text: res,
+          html: `בוגרים נוספו למערכת בהצלחה <span style="font-size:24px; font-weight:bold;">${res}</span>`,
           confirmButtonText: "חזור לעמוד הבית",
           confirmButtonColor: "#4a90e2",
           showDenyButton: true,

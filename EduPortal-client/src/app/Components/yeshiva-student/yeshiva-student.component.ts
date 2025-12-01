@@ -110,12 +110,12 @@ async validateColumns(file: File): Promise<boolean> {
     this.spiner.show();
 
     this.yeshivaStudentService.addYeshiva(formData).subscribe({
-      next: (res: string) => {
+      next: (res: number) => {
         this.spiner.hide();
         Swal.fire({
           icon: 'success',
           title: 'הקובץ הועלה בהצלחה',
-          text: res,
+          html: `אברכים נוספו למערכת בהצלחה <span style="font-size:24px; font-weight:bold;"> ${res}</span>`,
           confirmButtonText: 'חזור לעמוד הבית',
           confirmButtonColor: '#4a90e2',
           showDenyButton: true,

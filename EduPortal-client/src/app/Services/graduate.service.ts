@@ -12,7 +12,7 @@ export class GraduateService {
   GetGraduateById(id:string): Observable<Graduate> {
   return this.http.get<Graduate>(`${this.apiUrl}Graduate/GetById?GraduateId=${id}`);
   }
-  addGradute(form:FormData){
-    return this.http.post(`${this.apiUrl}ExcelImport/UploadExcelGraduate`,form,{responseType: 'text' });
+  addGradute(form:FormData):Observable<number> {
+    return this.http.post<number>(`${this.apiUrl}ExcelImport/UploadExcelGraduate`,form);
   }
 }
