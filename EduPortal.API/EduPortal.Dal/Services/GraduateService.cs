@@ -51,7 +51,7 @@ namespace EduPortal.Dal.Services
                 var existing = await this.context.Graduate.FindAsync(graduate.IDNumber);
                 if (existing != null)
                 {
-                    return existing;
+                    return null;
                 }
                 await this.context.Graduate.AddAsync(graduate);
                 await this.context.SaveChangesAsync();

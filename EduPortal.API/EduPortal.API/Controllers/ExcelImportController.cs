@@ -16,7 +16,6 @@ namespace EduPortal.API.Controllers
         {
             this.excelImportService = excelImportService;
         }
-
         [HttpPost("UploadExcelGraduate")]
         public async Task<IActionResult> UploadExcelGraduate(IFormFile file)
         {
@@ -32,8 +31,8 @@ namespace EduPortal.API.Controllers
             try
             {
                 using var stream = file.OpenReadStream();
-                await excelImportService.ImportIGraduateFromExcel(stream);
-                return Ok("הקובץ נטען בהצלחה");
+                int addedCount = await excelImportService.ImportIGraduateFromExcel(stream);
+                return Ok(addedCount); 
             }
             catch (Exception ex)
             {
@@ -56,8 +55,8 @@ namespace EduPortal.API.Controllers
             try
             {
                 using var stream = file.OpenReadStream();
-                await excelImportService.ImportYeshivaStudentsFromExcel(stream);
-                return Ok("הקובץ נטען בהצלחה");
+                int addedCount=await excelImportService.ImportYeshivaStudentsFromExcel(stream);
+                return Ok(addedCount);
             }
             catch (Exception ex)
             {

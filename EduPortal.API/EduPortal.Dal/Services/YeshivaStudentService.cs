@@ -53,7 +53,7 @@ namespace EduPortal.Dal.Services
                 var existing = await this.context.YeshivaStudent.FindAsync(yeshivaStudent.IdNumber);
                 if (existing != null)
                 {
-                    return existing;
+                    return null;
                 }
                 await this.context.YeshivaStudent.AddAsync(yeshivaStudent);
                 await this.context.SaveChangesAsync();

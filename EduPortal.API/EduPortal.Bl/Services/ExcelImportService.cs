@@ -22,7 +22,7 @@ namespace EduPortal.Bl.Services
             this.yeshivaStudent = yeshivaStudent;
         }
 
-        public async Task ImportIGraduateFromExcel(Stream fileStream)
+        public async Task<int> ImportIGraduateFromExcel(Stream fileStream)
         {
             fileStream.Position = 0;
             using var workbook = new XLWorkbook(fileStream);
@@ -66,12 +66,20 @@ namespace EduPortal.Bl.Services
                 };
                 graduates.Add(grad);
             }
+            int addedCount = 0;
 
             foreach (var g in graduates)
-                await graduate.CreateGraduate(g);
+            {
+                var created = await graduate.CreateGraduate(g);
+                if (created != null) 
+                {
+                    addedCount++;
+                }
+            }
+            return addedCount;
         }
 
-        public async Task ImportYeshivaStudentsFromExcel(Stream fileStream)
+        public async Task<int> ImportYeshivaStudentsFromExcel(Stream fileStream)
         {
             fileStream.Position = 0;
             using var workbook = new XLWorkbook(fileStream);
@@ -94,9 +102,17 @@ namespace EduPortal.Bl.Services
                 };
                 students.Add(student);
             }
+            int addedCount = 0;
 
             foreach (var s in students)
-                await yeshivaStudent.CreateYeshivaStudent(s);
+            {
+                var created =await yeshivaStudent.CreateYeshivaStudent(s);
+                if (created != null)
+                {
+                    addedCount++;
+                }
+            }
+            return addedCount;
         }
 
         public Task<List<ChildDetails>> ExtractPhonePairs(
@@ -117,7 +133,6 @@ namespace EduPortal.Bl.Services
 
             try
             {
-                // ClosedXML (xlsx)
                 fileStream.Position = 0;
                 using var workbook = new XLWorkbook(fileStream);
                 var worksheet = workbook.Worksheet(1);
@@ -155,7 +170,6 @@ namespace EduPortal.Bl.Services
             }
             catch
             {
-                // NPOI fallback (xls)
                 fileStream.Position = 0;
                 using var hssfWorkbook = new HSSFWorkbook(fileStream);
                 var sheet = hssfWorkbook.GetSheetAt(0);

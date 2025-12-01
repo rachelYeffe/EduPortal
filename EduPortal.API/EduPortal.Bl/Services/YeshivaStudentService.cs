@@ -50,7 +50,9 @@ namespace EduPortal.Bl.Services
         {
             try
             {
-                await dalManager.YeshivaStudents.CreateYeshivaStudent(mapper.Map<Dal.Models.YeshivaStudent>(yeshivaStudent));
+                var exists=await dalManager.YeshivaStudents.CreateYeshivaStudent(mapper.Map<Dal.Models.YeshivaStudent>(yeshivaStudent));
+                if(exists==null)
+                    return null ;
                 return mapper.Map<Dto.Models.YeshivaStudent>(yeshivaStudent);
             }
             catch (Exception)

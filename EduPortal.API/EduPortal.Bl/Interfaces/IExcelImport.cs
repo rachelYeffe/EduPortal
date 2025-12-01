@@ -7,8 +7,8 @@ namespace EduPortal.Bl.Interfaces
 {
     public interface IExcelImport
     {
-        Task ImportIGraduateFromExcel(Stream fileStream);
-        Task ImportYeshivaStudentsFromExcel(Stream fileStream);
+        Task<int> ImportIGraduateFromExcel(Stream fileStream);
+        Task<int> ImportYeshivaStudentsFromExcel(Stream fileStream);
         Task<List<ChildDetails>> ExtractPhonePairs(
             Stream fileStream,
             string phoneHeader = null,

@@ -47,20 +47,22 @@ namespace EduPortal.Bl.Services
 
 
         }
-        public async Task<Graduate> CreateGraduate(Graduate graduate)
+        public async Task<Graduate?> CreateGraduate(Graduate graduate)
         {
             try
             {
-                await dalManager.Graduates.CreateGraduate(mapper.Map<Dal.Models.Graduate>(graduate));
-                return mapper.Map<Graduate>(graduate);
+                var exists = await dalManager.Graduates.CreateGraduate(mapper.Map<Dal.Models.Graduate>(graduate)); 
+                if (exists==null)
+                    return null;
+
+                return mapper.Map<Graduate>(graduate); 
             }
             catch (Exception)
             {
-
-                throw new Exception();
+                throw;
             }
         }
-
+    
 
     }
 }
