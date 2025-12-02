@@ -12,6 +12,7 @@ import { Graduate } from '../../Models/Graduate';
 import { YeshivaStudent } from '../../Models/YeshivaStudent';
 import { YeshivaStudentComponent } from '../yeshiva-student/yeshiva-student.component';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { ProfilePopupComponent } from '../profile-popup/profile-popup.component';
 
 @Component({
   selector: 'app-children-excel-upload',
@@ -89,18 +90,16 @@ export class ChildrenExcelUploadComponent implements OnInit {
   }
   openGraduateDialog(graduate: Graduate): void {
     this.popupContainer.clear();
-    const componentRef = this.popupContainer.createComponent(GraduateComponent);
+    const componentRef = this.popupContainer.createComponent(ProfilePopupComponent);
     if (graduate.idNumber) {
-      componentRef.instance.idGraduate = graduate.idNumber;
-      componentRef.instance.getGraduate();
+      componentRef.instance.getGraduate(graduate.idNumber);
     }
   }
 
   openDialogYeshivaStudent(yeshiva: YeshivaStudent) {
-    const componentRef = this.popupContainer.createComponent(YeshivaStudentComponent);
+    const componentRef = this.popupContainer.createComponent(ProfilePopupComponent);
     if (yeshiva.idNumber) {
-      componentRef.instance.idStudent = yeshiva.idNumber;
-      componentRef.instance.getYeshivaStudent();
+      componentRef.instance.getYeshivaStudent(yeshiva.idNumber);
     }
 
 
